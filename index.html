@@ -1,12 +1,16 @@
+Here is a complete HTML document that creates a modern, animated website for Maurifleet with online booking and WhatsApp integration, based on your request.
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Maurifleet | Logistics & Transport Solutions</title>
+  <title>Maurifleet | Modern Logistics · Phoenix · Mauritius</title>
   <!-- Google Fonts + Font Awesome -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Animate on scroll & tiny slider for partners -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
   <style>
     * {
       margin: 0;
@@ -16,19 +20,18 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #fafcff;
-      color: #1a2c3e;
+      background: #f9fdfe;
+      color: #102b33;
       scroll-behavior: smooth;
     }
 
-    /* custom container */
     .container {
       max-width: 1280px;
       margin: 0 auto;
       padding: 0 32px;
     }
 
-    /* header / nav */
+    /* header / navbar */
     .navbar {
       display: flex;
       justify-content: space-between;
@@ -44,38 +47,38 @@
       gap: 14px;
     }
 
+    /* ----- CUSTOM LOGO (image ready) ----- */
     .logo-icon {
-      background: linear-gradient(135deg, #0b2b3b, #1e5a6c);
       width: 52px;
       height: 52px;
       border-radius: 16px;
+      background: linear-gradient(145deg, #0c4a5c, #196d7c);
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 12px 18px -8px rgba(0,32,64,0.12);
+      box-shadow: 0 12px 20px -10px rgba(0,60,70,0.3);
+      transition: transform 0.2s ease;
     }
-
-    .logo-icon i {
-      font-size: 28px;
-      color: white;
+    .logo-icon img {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      object-fit: cover;
     }
-
     .logo-text h1 {
       font-size: 1.9rem;
       font-weight: 800;
       letter-spacing: -0.5px;
-      background: linear-gradient(120deg, #0f3b4c, #1f6e7a);
+      background: linear-gradient(120deg, #0b4d5c, #1c7c8a);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
-
     .logo-text span {
       font-size: 0.8rem;
       font-weight: 500;
-      color: #4a6f7a;
+      color: #4c7987;
       display: block;
-      margin-top: 2px;
     }
 
     .nav-links {
@@ -84,122 +87,79 @@
       align-items: center;
       flex-wrap: wrap;
     }
-
     .nav-links a {
       text-decoration: none;
       font-weight: 600;
-      color: #1e3e4a;
+      color: #1f4e5c;
       transition: 0.2s;
     }
-
-    .nav-links a:hover {
-      color: #008b8b;
-    }
-
-    .btn-outline-light {
+    .nav-links a:hover { color: #008b8b; }
+    .btn-outline {
       background: transparent;
       border: 1.5px solid #1f6e7a;
       padding: 8px 18px;
       border-radius: 40px;
       font-weight: 600;
       color: #1f6e7a;
-      transition: 0.2s;
     }
+    .btn-outline:hover { background: #1f6e7a; color: white; }
 
-    .btn-outline-light:hover {
-      background: #1f6e7a;
-      color: white;
-    }
-
-    /* hero */
+    /* hero section */
     .hero {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      justify-content: space-between;
       gap: 48px;
-      margin: 48px 0 64px 0;
+      margin: 40px 0 70px;
     }
-
-    .hero-content {
-      flex: 1.2;
-    }
-
+    .hero-content { flex: 1.2; }
     .hero-badge {
-      background: #e0f2f1;
+      background: #e0f0f0;
       color: #006064;
-      display: inline-block;
       padding: 6px 18px;
       border-radius: 40px;
       font-weight: 600;
       font-size: 0.85rem;
+      display: inline-block;
       margin-bottom: 24px;
     }
-
     .hero-content h2 {
-      font-size: 3.3rem;
+      font-size: 3.2rem;
       font-weight: 800;
       line-height: 1.2;
       margin-bottom: 20px;
-      color: #0a2e3a;
+      color: #0a3a44;
     }
-
     .hero-content p {
       font-size: 1.1rem;
       line-height: 1.5;
-      color: #2c4b5a;
+      color: #2e6270;
       margin-bottom: 32px;
-      max-width: 90%;
     }
-
-    .hero-stats {
-      display: flex;
-      gap: 32px;
-      margin-top: 20px;
-    }
-
-    .stat h3 {
-      font-size: 2rem;
-      font-weight: 800;
-      color: #1f6e7a;
-    }
-
     .hero-image {
       flex: 0.9;
-      background: linear-gradient(145deg, #d9e9ec, #c2dfe5);
+      background: linear-gradient(145deg, #cbe8ed, #b2d7df);
       border-radius: 48px;
-      padding: 32px 24px;
+      padding: 32px;
       text-align: center;
-      box-shadow: 0 20px 35px -10px rgba(0,0,0,0.05);
+      box-shadow: 0 20px 30px -12px rgba(0,0,0,0.08);
     }
+    .hero-image i { font-size: 110px; color: #1a707e; }
 
-    .hero-image i {
-      font-size: 120px;
-      color: #216e7c;
-      opacity: 0.8;
+    /* story timeline (animated & neat) */
+    .story-section {
+      margin: 80px 0;
     }
-
-    /* history section */
-    .history-section {
-      background: white;
-      border-radius: 48px;
-      padding: 48px 40px;
-      margin: 60px 0;
-      box-shadow: 0 12px 28px -8px rgba(0, 32, 64, 0.05);
-      border: 1px solid rgba(31, 110, 122, 0.15);
-    }
-
     .section-title {
       font-size: 2rem;
       font-weight: 700;
-      margin-bottom: 20px;
+      margin-bottom: 40px;
       position: relative;
       display: inline-block;
     }
-
     .section-title:after {
       content: '';
-      width: 60px;
+      width: 70px;
       height: 4px;
       background: #1f6e7a;
       position: absolute;
@@ -207,368 +167,321 @@
       left: 0;
       border-radius: 4px;
     }
-
-    .history-text {
-      font-size: 1.08rem;
-      line-height: 1.6;
-      margin-top: 28px;
-      max-width: 85%;
-      color: #2d4f5e;
-    }
-
-    /* partners grid */
-    .partners-section {
-      margin: 70px 0;
-    }
-
-    .partner-grid {
+    .timeline {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 28px;
-      margin-top: 36px;
+      gap: 30px;
+      justify-content: center;
+      margin-top: 30px;
     }
-
-    .partner-card {
-      background: #ffffff;
-      border-radius: 60px;
-      padding: 12px 28px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
-      border: 1px solid #e2edf0;
-      font-weight: 600;
-      font-size: 1rem;
-      color: #175d6b;
-      transition: 0.2s;
-      display: flex;
-      align-items: center;
-      gap: 12px;
+    .timeline-card {
+      background: white;
+      border-radius: 32px;
+      padding: 28px 24px;
+      flex: 1;
+      min-width: 240px;
+      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+      border: 1px solid #dcf0f2;
+      text-align: center;
     }
-
-    .partner-card i {
-      font-size: 1.3rem;
-      color: #1f6e7a;
+    .timeline-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 40px -12px rgba(0,100,100,0.15);
     }
-
-    /* CTA / reservation whatsapp */
-    .reserve-card {
-      background: linear-gradient(125deg, #103f4b, #1c6e7c);
-      border-radius: 48px;
-      padding: 48px 48px;
-      margin: 50px 0 70px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 32px;
-      color: white;
-      box-shadow: 0 20px 35px -10px rgba(0,0,0,0.2);
-    }
-
-    .reserve-text h3 {
+    .year {
       font-size: 2rem;
-      font-weight: 700;
+      font-weight: 800;
+      color: #1f6e7a;
       margin-bottom: 12px;
     }
-
-    .reserve-text p {
-      font-size: 1rem;
-      opacity: 0.9;
+    .quote-msg {
+      font-style: italic;
+      margin-top: 12px;
+      color: #2c6b78;
     }
 
-    .wa-btn {
-      background: #25D366;
-      border: none;
-      padding: 16px 38px;
-      border-radius: 60px;
-      font-size: 1.2rem;
+    /* partners marquee / animated sliding */
+    .partners-section {
+      margin: 70px 0;
+      overflow: hidden;
+      background: #f1fafc;
+      padding: 32px 0;
+      border-radius: 64px;
+    }
+    .marquee {
+      display: flex;
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+    }
+    .marquee-track {
+      display: flex;
+      gap: 48px;
+      animation: scroll 28s linear infinite;
+      padding: 0 20px;
+    }
+    .partner-item {
+      background: white;
+      border-radius: 48px;
+      padding: 12px 32px;
       font-weight: 700;
-      color: white;
-      display: inline-flex;
-      align-items: center;
-      gap: 14px;
-      cursor: pointer;
-      transition: 0.2s;
-      box-shadow: 0 10px 18px rgba(0,0,0,0.1);
-      text-decoration: none;
+      font-size: 1.1rem;
+      color: #1b5f6b;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.02);
+      display: inline-block;
+      letter-spacing: -0.2px;
+    }
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
     }
 
-    .wa-btn:hover {
-      background: #128C7E;
-      transform: scale(1.02);
-    }
-
-    /* form / quote request (WhatsApp) */
-    .quote-section {
-      background: #ffffff;
+    /* booking form + reservation */
+    .booking-online {
+      background: white;
       border-radius: 48px;
       padding: 48px 40px;
-      margin: 40px 0;
-      box-shadow: 0 15px 35px rgba(0, 20, 30, 0.05);
-      border: 1px solid #dde9ec;
+      margin: 40px 0 60px;
+      box-shadow: 0 20px 40px rgba(0, 40, 50, 0.05);
+      border: 1px solid #e2f0f2;
     }
-
-    .form-grid {
+    .two-columns {
       display: flex;
       flex-wrap: wrap;
       gap: 40px;
-      margin-top: 30px;
+      margin-top: 32px;
     }
-
     .form-col {
       flex: 1;
       min-width: 260px;
     }
-
     .input-group {
-      margin-bottom: 24px;
+      margin-bottom: 22px;
     }
-
     .input-group label {
-      display: block;
       font-weight: 600;
       margin-bottom: 8px;
-      color: #1e5565;
+      display: block;
+      color: #1a5f6b;
     }
-
     .input-group input, .input-group select, .input-group textarea {
       width: 100%;
       padding: 14px 18px;
       border-radius: 32px;
-      border: 1.5px solid #d4e2e6;
+      border: 1.5px solid #d7e9ec;
       font-family: 'Inter', sans-serif;
-      font-size: 1rem;
+      background: #ffffff;
       transition: 0.2s;
-      background: #fefefe;
     }
-
     .input-group input:focus, .input-group textarea:focus {
       border-color: #1f6e7a;
       outline: none;
       box-shadow: 0 0 0 3px rgba(31,110,122,0.2);
     }
-
-    .submit-btn {
-      background: #1f6e7a;
-      color: white;
+    .wa-submit {
+      background: #25D366;
       border: none;
       padding: 14px 28px;
-      border-radius: 40px;
+      border-radius: 60px;
       font-weight: 700;
+      color: white;
       font-size: 1rem;
-      cursor: pointer;
       display: inline-flex;
       align-items: center;
       gap: 12px;
+      cursor: pointer;
       transition: 0.2s;
     }
-
-    .submit-btn:hover {
-      background: #0d515f;
-      transform: translateY(-2px);
+    .wa-submit:hover {
+      background: #128C7E;
+      transform: scale(1.02);
     }
-
-    .contact-info {
-      background: #f1f8fa;
-      padding: 24px;
+    .info-box {
+      background: #f2fafc;
       border-radius: 32px;
-      margin-top: 20px;
+      padding: 28px;
     }
-
-    .contact-info p {
+    .info-box p {
       margin: 14px 0;
       display: flex;
       align-items: center;
       gap: 12px;
-      font-weight: 500;
     }
-
     footer {
-      background: #0c2e38;
-      color: #ccdee3;
+      background: #0c3640;
+      color: #cde7ec;
       padding: 48px 0 32px;
+      border-radius: 48px 48px 0 0;
       margin-top: 60px;
-      border-radius: 40px 40px 0 0;
     }
-
     .footer-flex {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       gap: 30px;
     }
-
-    .footer-col h4 {
-      color: white;
-      margin-bottom: 18px;
-      font-weight: 600;
-    }
-
-    .footer-col p i {
-      margin-right: 8px;
-    }
-
     .copyright {
       text-align: center;
       margin-top: 48px;
       padding-top: 24px;
-      border-top: 1px solid #2a5f6b;
-      font-size: 0.85rem;
+      border-top: 1px solid #2b6f7c;
     }
-
-    @media (max-width: 850px) {
-      .container {
-        padding: 0 24px;
-      }
-      .hero-content h2 {
-        font-size: 2.4rem;
-      }
-      .history-text {
-        max-width: 100%;
-      }
-      .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+    @media (max-width: 800px) {
+      .container { padding: 0 20px; }
+      .hero-content h2 { font-size: 2.2rem; }
     }
   </style>
 </head>
 <body>
 
-<header style="background: white; border-bottom: 1px solid #e9f0f2;">
+<header style="background: white; border-bottom: 1px solid #e2f0f2;">
   <div class="container">
     <div class="navbar">
       <div class="logo-area">
         <div class="logo-icon">
-          <i class="fas fa-truck-fast"></i>
+          <!-- MAURIFLEET LOGO (place your logo file named "logo-mauri.jpeg" in same folder) -->
+          <img src="logo-mauri.jpeg" alt="Maurifleet Logo" onerror="this.onerror=null; this.parentElement.innerHTML='<i class=\'fas fa-truck-fast\' style=\'font-size:28px; color:white;\'></i>'">
         </div>
         <div class="logo-text">
           <h1>Maurifleet</h1>
-          <span>Logistics • Trust • Reliability</span>
+          <span>Phoenix • Trust & Reliability since 2000s</span>
         </div>
       </div>
       <div class="nav-links">
         <a href="#home">Home</a>
-        <a href="#history">History</a>
+        <a href="#story">Our Story</a>
         <a href="#partners">Partners</a>
-        <a href="#quote">Quote</a>
-        <a href="#contact" class="btn-outline-light"><i class="fas fa-phone-alt"></i> Contact</a>
+        <a href="#booking">Book Online</a>
+        <a href="#contact" class="btn-outline"><i class="fas fa-phone-alt"></i> Contact</a>
       </div>
     </div>
   </div>
 </header>
 
 <main>
-  <!-- Hero Section -->
   <div class="container" id="home">
     <div class="hero">
-      <div class="hero-content">
-        <div class="hero-badge"><i class="fas fa-shield-alt"></i> Since 2000s • Trust & Reliability</div>
-        <h2>Moving Mauritius forward,<br>one load at a time.</h2>
-        <p>From a single truck to a trusted fleet — Maurifleet delivers excellence across the island. 20+ corporate partners, 100% commitment.</p>
-        <div class="hero-stats">
-          <div class="stat"><h3>20+</h3><span>Corporate Clients</span></div>
-          <div class="stat"><h3>2000+</h3><span>Deliveries</span></div>
-          <div class="stat"><h3>24/7</h3><span>Support</span></div>
+      <div class="hero-content" data-aos="fade-right">
+        <div class="hero-badge"><i class="fas fa-map-pin"></i> Phoenix, Mauritius</div>
+        <h2>Modern logistics,<br>driven by trust</h2>
+        <p>From one truck to a fleet — we deliver excellence across the island. Online booking, real-time quotes & direct WhatsApp support.</p>
+        <div class="hero-stats" style="display: flex; gap: 32px; margin-top: 20px;">
+          <div><strong style="font-size: 2rem; color:#1f6e7a;">20+</strong><br>Partners</div>
+          <div><strong style="font-size: 2rem; color:#1f6e7a;">2000+</strong><br>Deliveries</div>
+          <div><strong style="font-size: 2rem; color:#1f6e7a;">24/7</strong><br>Support</div>
         </div>
       </div>
-      <div class="hero-image">
-        <i class="fas fa-trailer"></i>
-        <i class="fas fa-truck-moving" style="font-size: 100px; margin-left: 10px;"></i>
-        <p style="margin-top: 20px; font-weight: 500;">Fleet that delivers trust</p>
+      <div class="hero-image" data-aos="fade-left">
+        <i class="fas fa-truck-moving"></i>
+        <i class="fas fa-route" style="margin-left: 20px;"></i>
+        <p style="margin-top: 20px; font-weight: 500;">Serving all regions of Mauritius</p>
       </div>
     </div>
   </div>
 
-  <!-- History Section -->
-  <div class="container" id="history">
-    <div class="history-section">
-      <div class="section-title">Our journey — built on trust</div>
-      <div class="history-text">
-        <i class="fas fa-quote-left" style="color: #1f6e7a; margin-right: 8px; opacity: 0.7;"></i> 
-        Founded in the early 2000s by <strong>Mrs. Sobha</strong>, Maurifleet started with a single truck and a vision: to offer unmatched reliability. Through dedication, word-of-mouth recommendations, and genuine customer relationships, we steadily climbed the ladder. Each satisfied client became a pillar of our reputation. Today, we stand as a symbol of <strong>trust, punctuality, and integrity</strong> in the logistics sector of Mauritius. Our growth is fueled by real partnerships, not just contracts.
+  <!-- STORY SECTION (animated timeline, neat) -->
+  <div class="container" id="story">
+    <div class="story-section">
+      <div class="section-title">Our journey — from passion to fleet</div>
+      <div class="timeline">
+        <div class="timeline-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="year">2002</div>
+          <i class="fas fa-truck" style="font-size: 32px; color: #1f6e7a;"></i>
+          <p><strong>Mrs. Sobha's dream</strong> — started with a single truck, driven by integrity.</p>
+        </div>
+        <div class="timeline-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="year">2010</div>
+          <i class="fas fa-chart-line" style="font-size: 32px; color: #1f6e7a;"></i>
+          <p>Word-of-mouth recommendations fueled our growth. Trust became our brand.</p>
+        </div>
+        <div class="timeline-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="year">2020+</div>
+          <i class="fas fa-handshake" style="font-size: 32px; color: #1f6e7a;"></i>
+          <p>20+ corporate clients, modern fleet, and a reputation for reliability across Mauritius.</p>
+        </div>
       </div>
-      <div style="margin-top: 28px; display: flex; gap: 16px; flex-wrap: wrap;">
-        <span style="background:#eef3f5; padding:6px 16px; border-radius:40px;"><i class="fas fa-check-circle"></i> 100% client-driven</span>
-        <span style="background:#eef3f5; padding:6px 16px; border-radius:40px;"><i class="fas fa-handshake"></i> Recommendation first</span>
-        <span style="background:#eef3f5; padding:6px 16px; border-radius:40px;"><i class="fas fa-chart-line"></i> Steady organic growth</span>
+      <div class="quote-msg" style="margin-top: 32px; text-align: center; background: #eef6f8; border-radius: 60px; padding: 20px;" data-aos="fade-in">
+        <i class="fas fa-quote-left"></i> “We climbed the ladder through customer recommendations, building our image on trust and reliability.” — Mrs. Sobha
       </div>
     </div>
   </div>
 
-  <!-- Partners Section (20+ companies) -->
-  <div class="container" id="partners">
-    <div class="partners-section">
-      <div class="section-title">Trusted by industry leaders</div>
-      <p style="margin-top: 20px; color: #2c5b68;">We proudly collaborate with 20+ companies across Mauritius, including:</p>
-      <div class="partner-grid">
-        <div class="partner-card"><i class="fas fa-leaf"></i> Eco Deck</div>
-        <div class="partner-card"><i class="fas fa-seedling"></i> Maurema</div>
-        <div class="partner-card"><i class="fas fa-tools"></i> Bricolage</div>
-        <div class="partner-card"><i class="fas fa-chart-simple"></i> Agiliss</div>
-        <div class="partner-card"><i class="fas fa-building"></i> Stage In</div>
-        <div class="partner-card"><i class="fas fa-video"></i> Impact Producing</div>
-        <div class="partner-card"><i class="fas fa-bolt"></i> VS</div>
-        <div class="partner-card"><i class="fas fa-tree"></i> Fujiland</div>
+  <!-- PARTNERS ANIMATED MARQUEE (no icons, just names) -->
+  <div class="partners-section" id="partners">
+    <div class="container">
+      <div class="section-title" style="margin-bottom: 24px;">Trusted by 20+ companies</div>
+      <div class="marquee">
+        <div class="marquee-track">
+          <span class="partner-item">Eco Deck</span>
+          <span class="partner-item">Maurema</span>
+          <span class="partner-item">Bricolage</span>
+          <span class="partner-item">Agiliss</span>
+          <span class="partner-item">Stage In</span>
+          <span class="partner-item">Impact Producing</span>
+          <span class="partner-item">VS</span>
+          <span class="partner-item">Fujiland</span>
+          <!-- duplicate for seamless loop -->
+          <span class="partner-item">Eco Deck</span>
+          <span class="partner-item">Maurema</span>
+          <span class="partner-item">Bricolage</span>
+          <span class="partner-item">Agiliss</span>
+          <span class="partner-item">Stage In</span>
+          <span class="partner-item">Impact Producing</span>
+          <span class="partner-item">VS</span>
+          <span class="partner-item">Fujiland</span>
+        </div>
       </div>
-      <div style="margin-top: 28px; font-style: italic; color: #306f7a;">...and many more dynamic partners across the island.</div>
+      <p style="text-align: center; margin-top: 32px; color: #2c6b78;">+ many more dynamic partners across the island</p>
     </div>
   </div>
 
-  <!-- RESERVATION / WHATSAPP DIRECT (CTA) -->
-  <div class="container">
-    <div class="reserve-card" id="reserve-wa">
-      <div class="reserve-text">
-        <h3><i class="fab fa-whatsapp"></i> Need a transport or quote?</h3>
-        <p>Request directly on WhatsApp — we’ll get back to you within minutes.</p>
-        <p style="font-size: 0.9rem; margin-top: 8px;">📦 Full truckload, urgent delivery, or scheduled fleet — just tap.</p>
-      </div>
-      <button class="wa-btn" id="directWABtn"><i class="fab fa-whatsapp fa-lg"></i> Chat on WhatsApp</button>
-    </div>
-  </div>
-
-  <!-- QUOTE & CONTACT FORM -> WHATSAPP integration -->
-  <div class="container" id="quote">
-    <div class="quote-section">
-      <div class="section-title">Request a quotation</div>
-      <p style="margin-top: 16px;">Fill in the details and we’ll send you a personalized offer directly on WhatsApp (message will be sent to our official Maurifleet line).</p>
-      
-      <div class="form-grid">
+  <!-- ONLINE BOOKING + RESERVATION + QUOTE (WhatsApp integration) -->
+  <div class="container" id="booking">
+    <div class="booking-online">
+      <div class="section-title">📦 Book online or request a quote</div>
+      <p>Reserve your truck, schedule delivery, or ask for a personalized quote. We'll respond directly via WhatsApp within minutes.</p>
+      <div class="two-columns">
         <div class="form-col">
-          <form id="quoteForm">
+          <form id="bookingForm">
             <div class="input-group">
               <label>Full name *</label>
-              <input type="text" id="fullName" placeholder="e.g. Jean Dupont" required>
+              <input type="text" id="fullName" placeholder="e.g. Marie Claire" required>
             </div>
             <div class="input-group">
-              <label>Phone (WhatsApp) *</label>
-              <input type="tel" id="phoneNum" placeholder="+230 5XXX XXXX" required>
+              <label>WhatsApp number *</label>
+              <input type="tel" id="whatsappNum" placeholder="+230 5XXX XXXX" required>
             </div>
             <div class="input-group">
               <label>Service type</label>
-              <select id="serviceType">
-                <option value="Freight / Full truck">Freight / Full truck</option>
-                <option value="Partial load">Partial load</option>
-                <option value="Special cargo">Special cargo</option>
-                <option value="Regular fleet contract">Regular fleet contract</option>
+              <select id="serviceSelect">
+                <option value="Full truck load">Full truck load</option>
+                <option value="Partial load / sharing">Partial load / sharing</option>
+                <option value="Express delivery (same day)">Express delivery (same day)</option>
+                <option value="Fleet contract (weekly)">Fleet contract (weekly)</option>
               </select>
             </div>
             <div class="input-group">
-              <label>Additional details</label>
-              <textarea rows="3" id="details" placeholder="Pickup location, delivery area, dimensions..."></textarea>
+              <label>Pickup & delivery details</label>
+              <textarea rows="2" id="addressDetails" placeholder="From: Phoenix / To: Port Louis ..."></textarea>
             </div>
-            <button type="submit" class="submit-btn"><i class="fab fa-whatsapp"></i> Send quote request via WhatsApp</button>
+            <div class="input-group">
+              <label>Preferred date</label>
+              <input type="date" id="prefDate">
+            </div>
+            <button type="submit" class="wa-submit"><i class="fab fa-whatsapp fa-lg"></i> Send booking request</button>
           </form>
         </div>
         <div class="form-col">
-          <div class="contact-info" id="contact">
-            <h4><i class="fas fa-address-card"></i> Direct contact</h4>
-            <p><i class="fas fa-phone-alt"></i> +230 52527906</p>
-            <p><i class="fas fa-phone-alt"></i> +230 52507056</p>
+          <div class="info-box" id="contact">
+            <h4><i class="fas fa-location-dot"></i> Maurifleet HQ</h4>
+            <p><strong>📍 Phoenix, Mauritius</strong> — Strategic hub for fast island-wide logistics.</p>
+            <p><i class="fas fa-phone-alt"></i> +230 52527906  &nbsp;|&nbsp;  +230 52507056</p>
             <p><i class="fas fa-envelope"></i> admin@maurifleet.mu</p>
-            <hr style="margin: 18px 0; border-color:#cfe3e8;">
-            <p><i class="fas fa-clock"></i> Mon - Sat: 7:30 – 18:00</p>
-            <p><i class="fas fa-map-marker-alt"></i> Port Louis / Ebene, Mauritius</p>
+            <hr style="margin: 16px 0; border-color:#cae1e6;">
+            <p><i class="fab fa-whatsapp"></i> <strong>Instant booking</strong> — we receive your request directly on WhatsApp</p>
+            <button id="directWhatsAppBtn" style="background:#25D366; border:none; color:white; padding:12px 24px; border-radius:40px; margin-top:12px; width:100%; font-weight:bold; cursor:pointer;"><i class="fab fa-whatsapp"></i> Chat directly</button>
           </div>
         </div>
       </div>
@@ -580,134 +493,113 @@
   <div class="container">
     <div class="footer-flex">
       <div class="footer-col">
-        <h4><i class="fas fa-truck-ramp-box"></i> Maurifleet</h4>
-        <p>Reliable logistics since 2000s</p>
-        <p><i class="fas fa-star-of-life"></i> Trust & Recommendation driven</p>
+        <h4>Maurifleet Ltd</h4>
+        <p>Reliable logistics since 2000s • Phoenix, Mauritius</p>
+        <p><i class="fas fa-star-of-life"></i> Trust built on recommendations</p>
       </div>
       <div class="footer-col">
         <h4>Quick links</h4>
-        <p><a href="#home" style="color:#bbdfe6; text-decoration: none;">Home</a></p>
-        <p><a href="#history" style="color:#bbdfe6; text-decoration: none;">Our history</a></p>
-        <p><a href="#quote" style="color:#bbdfe6; text-decoration: none;">Get a quote</a></p>
+        <p><a href="#home" style="color:#b9e2e9;">Home</a> | <a href="#story" style="color:#b9e2e9;">History</a></p>
+        <p><a href="#booking" style="color:#b9e2e9;">Book online</a> | <a href="#partners" style="color:#b9e2e9;">Partners</a></p>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
         <p><i class="fab fa-whatsapp"></i> +230 52527906</p>
         <p><i class="fas fa-phone"></i> +230 52507056</p>
-        <p><i class="far fa-envelope"></i> admin@maurifleet.mu</p>
+        <p>admin@maurifleet.mu</p>
       </div>
     </div>
     <div class="copyright">
-      © 2025 Maurifleet — Built on integrity & customer loyalty. Mrs. Sobha’s legacy continues.
+      © 2025 Maurifleet — Mrs. Sobha's legacy: one truck, infinite trust. Serving Phoenix & all Mauritius.
     </div>
   </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
-  // Helper: WhatsApp redirect function with pre-filled message
-  function sendWhatsAppMessage(phoneNumber, messageText) {
-    // clean phone number (remove spaces, + but keep +230 format)
-    let cleanNumber = phoneNumber.replace(/\s+/g, '').replace(/^\+/, '');
-    if (!cleanNumber.startsWith('230') && !cleanNumber.startsWith('+230')) {
-      // if user typed without country code assume 230
-      if (cleanNumber.startsWith('5')) cleanNumber = '230' + cleanNumber;
-    }
-    // final whatsapp link
-    const waLink = `https://wa.me/${cleanNumber}?text=${encodeURIComponent(messageText)}`;
-    window.open(waLink, '_blank');
+  AOS.init({ duration: 800, once: true });
+
+  // Helper: send WhatsApp message to admin (your numbers)
+  function sendToAdminWhatsapp(adminNumber, message) {
+    let clean = adminNumber.replace(/\D/g, '');
+    if (!clean.startsWith('230')) clean = '230' + clean;
+    window.open(`https://wa.me/${clean}?text=${encodeURIComponent(message)}`, '_blank');
   }
 
-  // Direct WhatsApp button (primary numbers listed) - will send to one of our business numbers
-  const directBtn = document.getElementById('directWABtn');
+  // BOOKING FORM -> sends details directly to your WhatsApp (+23052527906)
+  const bookingForm = document.getElementById('bookingForm');
+  if (bookingForm) {
+    bookingForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('fullName').value.trim();
+      const phone = document.getElementById('whatsappNum').value.trim();
+      const service = document.getElementById('serviceSelect').value;
+      const address = document.getElementById('addressDetails').value.trim() || "Not specified";
+      const date = document.getElementById('prefDate').value || "Flexible";
+
+      if (!name || !phone) {
+        alert("Please provide your full name and WhatsApp number.");
+        return;
+      }
+
+      const adminNumber = "52527906";  // primary number +230 52527906
+      let msg = `🛻 *NEW ONLINE BOOKING - Maurifleet*%0A`;
+      msg += `👤 *Name:* ${name}%0A`;
+      msg += `📞 *Customer WA:* ${phone}%0A`;
+      msg += `🚛 *Service:* ${service}%0A`;
+      msg += `📍 *Pickup/Details:* ${address}%0A`;
+      msg += `📅 *Preferred date:* ${date}%0A`;
+      msg += `%0A🔔 Please contact this client back on ${phone} (WhatsApp).`;
+
+      sendToAdminWhatsapp(adminNumber, msg);
+      alert("✓ Your booking request has been sent! Our team will reply on WhatsApp within minutes.");
+      bookingForm.reset();
+    });
+  }
+
+  // direct whatsapp button (main number)
+  const directBtn = document.getElementById('directWhatsAppBtn');
   if (directBtn) {
     directBtn.addEventListener('click', () => {
-      // using the main number +23052527906 (or we can use both, but choose first official)
-      const mainNumber = '23052527906'; 
-      const greetingMsg = "Hello Maurifleet! I would like to request a reservation / quote for transport. Please let me know your availability. Thank you!";
-      window.open(`https://wa.me/${mainNumber}?text=${encodeURIComponent(greetingMsg)}`, '_blank');
+      const mainNumber = "52527906";
+      const greet = "Hello Maurifleet, I need a transport quote / booking. I'm from Phoenix area.";
+      window.open(`https://wa.me/${mainNumber}?text=${encodeURIComponent(greet)}`, '_blank');
     });
   }
 
-  // Form handler: send quote to WhatsApp (the admin number which will be the same as displayed)
-  const quoteForm = document.getElementById('quoteForm');
-  if (quoteForm) {
-    quoteForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      const fullName = document.getElementById('fullName').value.trim();
-      const phoneNumRaw = document.getElementById('phoneNum').value.trim();
-      const serviceType = document.getElementById('serviceType').value;
-      const details = document.getElementById('details').value.trim();
-      
-      if (!fullName || !phoneNumRaw) {
-        alert("Please provide your name and WhatsApp phone number.");
-        return;
+  // also make phone numbers in info-box clickable (WhatsApp)
+  const contactInfo = document.querySelector('.info-box');
+  if (contactInfo) {
+    const numbers = ['52527906', '52507056'];
+    numbers.forEach(num => {
+      const link = document.createElement('span');
+    });
+    const ps = contactInfo.querySelectorAll('p');
+    ps.forEach(p => {
+      if(p.innerText.includes('52527906') || p.innerText.includes('52507056')) {
+        p.style.cursor = 'pointer';
+        p.addEventListener('click', () => {
+          let raw = p.innerText.match(/[\d+ ]{8,}/g);
+          if(raw) {
+            let cleanNumber = raw[0].replace(/\D/g, '');
+            window.open(`https://wa.me/${cleanNumber}?text=${encodeURIComponent("Hello Maurifleet, I'm interested in your services.")}`, '_blank');
+          }
+        });
       }
-      
-      // Validate phone minimal
-      let phoneDigits = phoneNumRaw.replace(/\D/g, '');
-      if (phoneDigits.length < 8) {
-        alert("Please enter a valid phone number with area code (e.g. +230 5XXXXXXX)");
-        return;
-      }
-      
-      // Build informative message for the company (admin will receive it on their WhatsApp)
-      const adminNumber = '23052527906';   // first main contact, you'll get directly on your WA
-      // optional second number could be used but we deliver to primary
-      let message = `🛻 *NEW QUOTE REQUEST - Maurifleet*%0A`;
-      message += `📌 *Name:* ${fullName}%0A`;
-      message += `📞 *Client Phone:* ${phoneNumRaw}%0A`;
-      message += `🚛 *Service:* ${serviceType}%0A`;
-      message += `📝 *Details:* ${details || "Not specified"}%0A`;
-      message += `%0A🔔 *Please contact this client back on their WhatsApp: ${phoneNumRaw}*`;
-      
-      // send to admin number
-      const waAdminLink = `https://wa.me/${adminNumber}?text=${message}`;
-      window.open(waAdminLink, '_blank');
-      
-      // optional small user feedback
-      alert("✓ Your quote request has been prepared. You will be redirected to WhatsApp (admin chat). Our team will reply shortly!");
-      
-      // reset form optionally
-      // document.getElementById('quoteForm').reset(); (we can keep or not, user experience)
     });
   }
 
-  // also add click to phone numbers in contact-info (optional smooth)
-  const phoneNumbersFooter = document.querySelectorAll('.contact-info p i.fa-phone-alt, .footer-col p i.fa-phone, .footer-col p i.fa-whatsapp');
-  // just decorative, but we want direct wa for phone numbers?
-  // create additional: clicking on contact numbers opens whatsapp (but not necessary, but convenient)
-  // extra: make phone numbers in contact-info interactive for whatsapp
-  const waNumbers = ['+230 52527906', '+230 52507056'];
-  const contactParagraphs = document.querySelectorAll('.contact-info p');
-  contactParagraphs.forEach(p => {
-    if(p.innerText.includes('52527906') || p.innerText.includes('52507056')) {
-      p.style.cursor = 'pointer';
-      p.addEventListener('click', (e) => {
-        let numberRaw = p.innerText.replace(/\D/g, '');
-        if(numberRaw.startsWith('230')) numberRaw = numberRaw;
-        else if(numberRaw.length === 8) numberRaw = '230' + numberRaw;
-        window.open(`https://wa.me/${numberRaw}?text=${encodeURIComponent("Hello Maurifleet, I'm interested in your transport services.")}`, '_blank');
-      });
-      p.title = "Click to chat on WhatsApp";
-    }
-  });
-  
-  // if any anchor scroll
+  // smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
-      const targetId = this.getAttribute('href');
-      if(targetId === "#") return;
-      const targetElement = document.querySelector(targetId);
-      if(targetElement) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if(target) {
         e.preventDefault();
-        targetElement.scrollIntoView({ behavior: 'smooth' });
+        target.scrollIntoView({ behavior: 'smooth' });
       }
     });
   });
-  
-  // additional enhancement: initial console greet
-  console.log("Maurifleet — Trust & reliability since 2000s");
 </script>
 </body>
 </html>
+```
